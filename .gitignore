@@ -1,3 +1,7 @@
+# Custom 
+data/vid_frames
+data/vid_frames/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,41 +1,29 @@
+"References: https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html"
+
+import numpy as np
 import cv2
-import os
 
-def create_video_from_frames(frames_folder, output_video_path, fps=30):
-    # Get a list of all image files in the frames folder
-    image_files = [f for f in os.listdir(frames_folder) if f.endswith(".png") or f.endswith(".jpg")]
+cap = cv2.VideoCapture(0)
 
-    if not image_files:
-        print("No image files found in the frames folder.")
-        return
+if not cap.isOpened():
+    print("Unable to open camera. Exitting ...")
+    exit()
 
-    # Sort the image files to ensure they are in the correct order
-    # Note that this is an important step (as os.listdir doesn't load in order)
-    image_files.sort()
+count=0 ##### SOLUTION #####
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        print("Can't receive frame (stream end?). Exitting ...")
+        break
 
-    # Get the first image to determine the size of the video frames
-    first_image_path = os.path.join(frames_folder, image_files[0])
-    frame = cv2.imread(first_image_path)
-    height, width, _ = frame.shape
+    cv2.imshow('frame', frame) # Display the frame
 
-    # Define the codec and create a VideoWriter object
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Use 'XVID' for AVI format
-    out = cv2.VideoWriter(output_video_path, fourcc, fps, (width, height))
+    cv2.imwrite(f"../data/vid_frames/{count:04d}.jpg", frame) ##### SOLUTION #####
+    # count+= 1 ##### SOLUTION #####
 
-    # Loop through the image files and write each frame to the video
-    for image_file in image_files:
-        image_path = os.path.join(frames_folder, image_file)
-        frame = cv2.imread(image_path)
+    if cv2.waitKey(1) == ord('q'):
+        # waitKey -> Allows to display a window for 'x' miliseconds or till a key is pressed
+        break
 
-        if frame is not None:
-            out.write(frame)
-
-    # Release the VideoWriter and close the file
-    out.release()
-    print(f"Video created: {output_video_path}")
-
-# Example usage:
-frames_folder = "../data/vid_frames"
-output_video_path = "../data/no_magic.mp4"
-fps = 15  # Frames per second
-create_video_from_frames(frames_folder, output_video_path, fps)
+cap.release()
+cv2.destroyAllWindows()

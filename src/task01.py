@@ -9,7 +9,6 @@ if not cap.isOpened():
     print("Unable to open camera. Exitting ...")
     exit()
 
-count=0 ##### SOLUTION #####
 while True:
     ret, frame = cap.read()
     if not ret:
@@ -17,10 +16,7 @@ while True:
         break
 
     cv2.imshow('frame', frame) # Display the frame
-
-    cv2.imwrite(f"../data/vid_frames/{count:04d}.jpg", frame) ##### SOLUTION #####
-    count+= 1 ##### SOLUTION #####
-
+    
     if cv2.waitKey(1) == ord('q'):
         # waitKey -> Allows to display a window for 'x' miliseconds or till a key is pressed
         break

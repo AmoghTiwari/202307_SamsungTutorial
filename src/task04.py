@@ -1,8 +1,3 @@
-""" Questions
-- In the "fourcc = cv2.VideoWriter_fourcc(*'mp4v')" line, why is there a "*" befoer mp4v
-- Check the video. Is there an error? Please fix it
-"""
-
 import cv2
 import os
 
@@ -14,9 +9,14 @@ def create_video_from_frames(frames_folder, output_video_path, fps=30):
         print("No image files found in the frames folder.")
         return
 
+    image_files.sort()
+    image_files2 = image_files[:15]
+    for image_file in image_files[-15:]:
+        image_files2.append(image_file)
+    image_files = image_files2
+
     # Sort the image files to ensure they are in the correct order
     # Note that this is an important step (as os.listdir doesn't load in order)
-    # image_files.sort()
 
     # Get the first image to determine the size of the video frames
     first_image_path = os.path.join(frames_folder, image_files[0])
@@ -41,6 +41,6 @@ def create_video_from_frames(frames_folder, output_video_path, fps=30):
 
 # Example usage:
 frames_folder = "../data/vid_frames"
-output_video_path = "../data/video.mp4"
+output_video_path = "../data/magic.mp4"
 fps = 15  # Frames per second
 create_video_from_frames(frames_folder, output_video_path, fps)

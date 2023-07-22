@@ -1,1 +1,1 @@
-# samsung_tutorial
+# 2023_07_SamsungTutorial

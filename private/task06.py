@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = 1
+img = None ### Write your code here
 
 cv2.imshow("My Image", img)
 if cv2.waitKey(0) == ord('q'):

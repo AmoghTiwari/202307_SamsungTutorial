@@ -28,16 +28,16 @@ if __name__ == "__main__":
     img = cv2.imread(img_path)
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img_gray_stretched = linear_contrast_stretching(img_gray)
-    cv2.imwrite("../data/03_contrast_stretching/02_img_orig.png", img_gray)
-    cv2.imwrite("../data/03_contrast_stretching/02_img_stretched.png", img_gray_stretched)
+    cv2.imwrite("../data/03_contrast_stretching/02_lc_img_orig.png", img_gray)
+    cv2.imwrite("../data/03_contrast_stretching/02_lc_hist_orig.png", img_gray_stretched)
 
     plt.hist(img_gray)
     # plt.show()
-    plt.savefig("../data/03_contrast_stretching/02_hist_orig.png")
+    plt.savefig("../data/03_contrast_stretching/02_lc_img_stretched.png")
 
     plt.hist(img_gray_stretched)
     # plt.show()
-    plt.savefig("../data/03_contrast_stretching/02_hist_stretched.png")
+    plt.savefig("../data/03_contrast_stretching/02_lc_hist_stretched.png")
 
 
 

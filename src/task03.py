@@ -1,5 +1,5 @@
 """ Questions
-- In the "fourcc = cv2.VideoWriter_fourcc(*'mp4v')" line, why is there a "*" befoer mp4v
+- In the "fourcc = cv2.VideoWriter_fourcc(*'mp4v')" line, why is there a "*" before mp4v
 - Check the video. Is there an error? Please fix it
 """
 
@@ -13,10 +13,6 @@ def create_video_from_frames(frames_folder, output_video_path, fps=30):
     if not image_files:
         print("No image files found in the frames folder.")
         return
-
-    # Sort the image files to ensure they are in the correct order
-    # Note that this is an important step (as os.listdir doesn't load in order)
-    # image_files.sort()
 
     # Get the first image to determine the size of the video frames
     first_image_path = os.path.join(frames_folder, image_files[0])
@@ -40,7 +36,7 @@ def create_video_from_frames(frames_folder, output_video_path, fps=30):
     print(f"Video created: {output_video_path}")
 
 # Example usage:
-frames_folder = "../data/vid_frames"
-output_video_path = "../data/video.mp4"
+frames_folder = "../data/01_IO/vid_frames"
+output_video_path = "../data/01_IO/vids/video.mp4"
 fps = 15  # Frames per second
 create_video_from_frames(frames_folder, output_video_path, fps)

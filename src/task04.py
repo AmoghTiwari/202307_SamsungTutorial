@@ -10,18 +10,15 @@ def create_video_from_frames(frames_folder, output_video_path, fps=30):
         return
 
     image_files.sort()
-    image_files2 = image_files[:15]
-    for image_file in image_files[-15:]:
+    image_files2 = image_files[15:]
+    for image_file in image_files[:-15]:
         image_files2.append(image_file)
     image_files = image_files2
 
-    # Sort the image files to ensure they are in the correct order
-    # Note that this is an important step (as os.listdir doesn't load in order)
-
-    # Get the first image to determine the size of the video frames
-    first_image_path = os.path.join(frames_folder, image_files[0])
-    frame = cv2.imread(first_image_path)
-    height, width, _ = frame.shape
+    # # Get the first image to determine the size of the video frames
+    # first_image_path = os.path.join(frames_folder, image_files[0])
+    # frame = cv2.imread(first_image_path)
+    # height, width, _ = frame.shape
 
     # Define the codec and create a VideoWriter object
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Use 'XVID' for AVI format
@@ -40,7 +37,7 @@ def create_video_from_frames(frames_folder, output_video_path, fps=30):
     print(f"Video created: {output_video_path}")
 
 # Example usage:
-frames_folder = "../data/vid_frames"
-output_video_path = "../data/magic.mp4"
+frames_folder = "../data/01_IO/vid_frames"
+output_video_path = "../data/01_IO/vids/magic.mp4"
 fps = 15  # Frames per second
 create_video_from_frames(frames_folder, output_video_path, fps)

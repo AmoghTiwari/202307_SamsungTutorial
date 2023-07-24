@@ -31,7 +31,7 @@ Meaning of Each File / Directory
 `Day01_public`: Course attendees don't need to code up everything from scratch. They can use one of these scripts. For tasks where no corresponding script is provded, it means you need to code up the task on your own (You can reus code from your own previous tasks)
 `Day01_private`: The reference codes for all the tasks. However, these codes also have a few bugs here and there
 `Day01_annotated`: The modified/updated scripts from Day01_private, updated after using things in the session
-`docs/Day01_notes.md`: A reference document with rough description of possible expected errors and solutions
+`docs/Day01_notes.md`: A reference document with rough description of possible expected errors and solutions for different tasks
 
 
 # Day-2

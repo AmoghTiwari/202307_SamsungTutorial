@@ -27,7 +27,7 @@ def otsu_thresholding(image):
 
         # Compute between-class variance
         variance_between = w_background * w_foreground * (mean_background - mean_foreground) ** 2
-
+    
         # Update if the variance is greater than the best variance found so far
         if variance_between > best_variance:
             best_variance = variance_between

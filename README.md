@@ -8,15 +8,17 @@
 It is a good practice to create a virtual environment before installing packages. You can do so either with pip or anaconda. Pip usually comes preinstalled with python while anaconda needs to be installed (See instructions [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)). 
 
 ### Pip
-```python3 -m venv <virtual_env_name>
-source venv/bin/activate
+```
+python3 -m venv <virtual_env_name>
+source /path/to/venv/bin/activate
 pip install numpy
 pip install matplotlib
 pip install opencv-python
 ```
 
 ### Conda
-```conda create -n <virtual_env_name> python=3
+```
+conda create -n <virtual_env_name> python=3
 conda activate <virtual_env_name>
 conda install -c anaconda numpy
 conda install -c conda-forge opencv

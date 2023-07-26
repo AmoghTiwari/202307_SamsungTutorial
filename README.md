@@ -27,14 +27,16 @@ conda install -c conda-forge matplotlib
 
 **To use a locally created virtual env on jupyter notebook**, you may use this: https://medium.com/@nrk25693/how-to-add-your-conda-environment-to-your-jupyter-notebook-in-just-4-steps-abeab8b8d084
 
-## Instructions to Use
-Meaning of Each File / Directory
-`Day01_Notebook.ipynb`: Notebook containig the questions/tasks for the day
-`Day01_public`: Course attendees don't need to code up everything from scratch. They can use one of these scripts. For tasks where no corresponding script is provded, it means you need to code up the task on your own (You can reus code from your own previous tasks)
-`Day01_private`: The reference codes for all the tasks. However, these codes also have a few bugs here and there
-`Day01_annotated`: The modified/updated scripts from Day01_private, updated after using things in the session
-`docs/Day01_notes.md`: A reference document with rough description of possible expected errors and solutions for different tasks
+## File Structure and Usage Instructions
+- `Day01_Notebook.ipynb`: Notebook containig the questions/tasks for the day
+- `public`: The audience doesn't need to code up everything from scratch. They can use one of these scripts. For tasks where no corresponding script is provded, it means you need to code up the task on your own (You can reus code from your own previous tasks)
+- `private`: The reference codes for all the tasks. However, these codes also have a few bugs here and there, introduced intentionally.
+- `annotated`: The modified/updated scripts from the in-person session
+- `notes.md`: A reference document with rough description of possible expected errors and solutions for different tasks
 
 
 # Day-2
 ## Environment Setup
+The same environment as Day-1 can be used.
+## File Structure and Usage Instructions
+Self explanatory

@@ -30,8 +30,8 @@ conda install -c conda-forge matplotlib
 ## File Structure and Usage Instructions
 - `Day01_Notebook.ipynb`: Notebook containig the questions/tasks for the day
 - `public`: The audience doesn't need to code up everything from scratch. They can use one of these scripts. For tasks where no corresponding script is provded, it means you need to code up the task on your own (You can reus code from your own previous tasks)
-- `private`: The reference codes for all the tasks. However, these codes also have a few bugs here and there, introduced intentionally.
-- `annotated`: The modified/updated scripts from the in-person session
+- `private`: The reference codes for all the tasks. However, these codes also have a few bugs here and there, introduced intentionally. 
+- `annotated`: The modified/updated scripts from the in-person session. These should have the working code.
 - `notes.md`: A reference document with rough description of possible expected errors and solutions for different tasks
 
 
@@ -39,4 +39,9 @@ conda install -c conda-forge matplotlib
 ## Environment Setup
 The same environment as Day-1 can be used.
 ## File Structure and Usage Instructions
-Self explanatory
+It's self explanatory
+
+# Debugging Suggestions
+In case you get some errors while running the scripts, check the below two things before anything else:
+1. If the specified paths are correct. The directory structure was modified somewhat. So some paths might have got messed up.
+2. If `plt.show()` command is present. Since we used a notebook where in most cases we can get by without using `plt.show()` also, there are places where `plt.show()` hasn't been used. However, if you are running this on your local PC, without a notebook, then you would need to add `plt.show()` wherever relevant.

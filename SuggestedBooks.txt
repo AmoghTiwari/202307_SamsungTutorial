@@ -1,0 +1,3 @@
+Image Processing: Digital Image Processing by Gonzalez and Woods
+Computer Vision: Multi View Geometry by Hartley and Zisserman
+Graphics: Computer Graphics by Hern and Baker

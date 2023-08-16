@@ -1,8 +1,5 @@
 # 202307_SamsungTutorial
 
-**Github Repo**:  https://github.com/AmoghTiwari/202307_SamsungTutorial <br/>
-**Colab Notebook**: https://tinyurl.com/yxpptysj
-
 # Day-1
 ## Environment Setup
 It is a good practice to create a virtual environment before installing packages. You can do so either with pip or anaconda. Pip usually comes preinstalled with python while anaconda needs to be installed (See instructions [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)). 
